@@ -1,15 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        android:id="@+id/tvPage"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        style="@style/MyCardViewStyle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceLarge">
-    </TextView>
-</RelativeLayout>
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/house_icon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/stark_icon"
+                android:layout_marginTop="8dp">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tvPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@id/house_icon"
+                android:gravity="start"
+                android:text="John Snow"
+                android:textAppearance="?android:attr/textAppearanceMedium">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPage"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/house_icon"
+                android:gravity="start"
+                android:maxLines="2"
+                android:text="@string/lorem"
+                android:textAppearance="?android:attr/textAppearanceSmall">
+
+            </TextView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

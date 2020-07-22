@@ -7,17 +7,23 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.PagerTabStrip;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.gotapp.R;
 import com.example.gotapp.ui.fragments.PageFragment;
+import com.example.gotapp.viewmodels.CharacterViewModel;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
 public class MainActivity extends FragmentActivity {
+
+    private CharacterViewModel charViewModel;
 
     static final String TAG = "myLogs";
     static final int PAGE_COUNT = 3;
@@ -25,7 +31,6 @@ public class MainActivity extends FragmentActivity {
     TabLayout tabLayout;
     ViewPager pager;
     PagerAdapter pagerAdapter;
-    PagerTabStrip title;
 
 
     @Override
@@ -54,6 +59,13 @@ public class MainActivity extends FragmentActivity {
             public void onPageScrollStateChanged(int state) {
             }
         });
+
+        initViewModel();
+
+    }
+
+    private void initViewModel() {
+        charViewModel = new CharacterViewModel();
     }
 
     private static class MyFragmentPagerAdapter extends FragmentPagerAdapter {
