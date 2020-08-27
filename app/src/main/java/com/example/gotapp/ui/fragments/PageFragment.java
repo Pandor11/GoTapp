@@ -1,12 +1,7 @@
 package com.example.gotapp.ui.fragments;
 
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.PagerTabStrip;
 
-import java.util.ArrayList;
-import java.util.Random;
-
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +27,6 @@ public class PageFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         pageNumber = getArguments().getInt(ARGUMENT_PAGE_NUMBER);
-
 
 
     }

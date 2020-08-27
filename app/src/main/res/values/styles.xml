@@ -1,10 +1,11 @@
 <resources>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowNoTitle">true</item>
@@ -20,6 +21,12 @@
         <item name="android:background">@color/colorPrimaryDark</item>
     </style>
 
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:statusBarColor">@color/black</item>
+    </style>
+
     <style name="MyCardViewStyle" parent="Theme.AppCompat.Light">
         <item name="cardCornerRadius">2dp</item>
         <item name="cardElevation">2dp</item>
@@ -29,5 +36,6 @@
         <item name="contentPaddingRight">16dp</item>
         <item name="cardBackgroundColor">@color/title_name_white</item>
     </style>
+
 
 </resources>

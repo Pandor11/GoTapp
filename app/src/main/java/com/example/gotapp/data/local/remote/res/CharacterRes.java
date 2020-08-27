@@ -7,6 +7,8 @@ import com.example.gotapp.extensions.StringExtensions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import io.realm.RealmObject;
+
 import static com.example.gotapp.extensions.StringExtensions.lastSegment;
 
 public class CharacterRes {
