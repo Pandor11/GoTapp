@@ -7,4 +7,5 @@
     <color name="grey_char_name">#333333</color>
     <color name="black">#000000</color>
     <color name="white">#0000ff</color>
+    <color name="colorNavViewBackground">#fff</color>
 </resources>
